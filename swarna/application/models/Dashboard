@@ -1,0 +1,84 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+// This can be removed if you use __autoload() in config.php OR use Modular Extensions
+
+
+class Dashboard extends CI_Controller {
+
+	public function __construct()
+	{
+		header('Access-Control-Allow-Origin: *');
+		header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+
+		parent::__construct();
+
+		$this->db->query("SET time_zone='+5:30'");
+		
+		//check if loggedin
+		if(!$this->session->userdata("admin_id")){ redirect("login/validate"); }
+		$this->load->model("user_model");
+	}
+
+	public function index()
+	{
+		echo "<pre>"; 
+		$result = $this->user_model->run_manual_query_result("select * from tb_users");
+		print_r($result);
+	}
+	
+	public function browse(){
+		
+			$page=$this->input->get("page");
+			
+			if(!$page){
+					
+				$page=0;
+			}
+			
+			$page_size=15;
+			
+			if($this->input->get("page_size")>0){
+				$page_size=$this->input->get("page_size");
+			}
+			
+			$page_start=$page_size*$page;
+
+			//load category model
+			
+			
+			$result=$this->user_model->get_users($page_start,$page_size);
+			
+			$data['users']=$result['records'];
+			$data['total']=$result['total_records'];
+			$data['page_size']=$page_size;
+			$data['current_page']=$page+1;
+			$data['total_pages']=$data['total']/$page_size;
+			
+			if($data['total_pages']>(int)($data['total_pages'])){
+				$data['total_pages']=(int)($data['total_pages'])+1;
+			}
+			
+			$data['next_page']=false;
+			$data['next_page_num']=$page+1;
+			$data['prev_page']=true;
+			$data['prev_page_num']=$page-1;
+			
+			if($data['total']>(($page+1) * $page_size)){
+				$data['next_page']=true;
+			}
+			
+			if($page==0){
+				$data['prev_page']=false;
+			}
+			
+			$this->load->model("plans_model");
+			$data['plans']=$this->plans_model->get_all_plans();
+			
+			$this->load->model("coupon_model");
+			$data['coupons']=$this->coupon_model->get_all_records();
+
+			$this->lib->render_view("modules/user/browse.php",$data);
+
+    }
+    
+ 
+}

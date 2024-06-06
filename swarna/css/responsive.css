@@ -1,0 +1,149 @@
+
+@media only screen and (min-width: 280px) and (max-width:745px) {
+  /* For Phones: */
+  
+  body{
+	min-width:100% !important;
+ }
+  
+  .block-padding{
+	padding:30px 0px;
+	}
+  
+  /*Work bench*/
+  
+  #header-menu { display:none; }
+  #header-drawer { display:block !important; }
+  #header-menu{ clear: both !important; width: 100%; background: #eee;}
+  #header-menu ul > li{padding: 10px; border-top: 1px solid #fff; text-align: center; float: none !important; width:100%; margin-left:0px;}
+  
+  .box-width{ width:100% !important; min-width:100% !important;}
+  
+ 
+ /*banner block*/
+ 
+ #banner .banner-left{
+	width: 95%;
+    margin-left: 2.5%;
+    float:none !important;
+ }
+ 
+ #banner .bx-wrapper{
+	border: 3px solid #fff;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background:none !important;
+ }
+ 
+ .banner-right{
+	width: 95% !important;
+    padding-left: 2.5% !important;
+    padding-right: 2.5% !important;
+    margin: 0 auto !important;
+    float:none !important;
+ }
+  
+  .form-column{
+	float:none !important;
+	margin:0 auto !important;
+	width:100%;
+	text-align:center;
+  }
+  
+  .form-input, .form-select{
+	width:100%;
+	display:inline-block;
+  }
+  
+  .cat-item{
+	margin-bottom:21px;
+  }
+  
+  .howitworks-item{
+	float: none !important;
+    width: 95% !important;
+    margin: 0 auto !important;
+    margin-bottom: 20px !important;
+  }
+  
+  #about-us{
+	width:95% !important;
+	margin: 0 auto !important;
+	border-radius:4px;
+	text-align:center;
+  }
+  
+  .aboutus-left{
+	float:none !important;
+	width:100%;
+  }
+  
+  .aboutus-right{
+	float:none !important;
+	width:95%;
+	padding-left:2.5%;
+	padding-right:2.5%;
+	margin-top:20px;
+  }
+  
+  .aboutus-right h2{
+	text-align:center;
+  }
+  
+  .team-member{
+	margin-bottom:20px;
+  }
+  
+  .team-member-name{
+	float:none !important;
+	width:100% !important;
+	text-align:center;
+  }
+  
+  .team-member-pic{
+	float:none !important;
+	text-align:center;
+	width:100%;
+  }
+  
+  
+  .service-h1-title{
+	padding:30px 10px !important;
+	line-height:1.2em;
+	font-size:1.7em;
+  }
+  
+  #service-banner{
+	height:auto !important;
+	background:none !important;
+  }
+  
+  #service-banner .banner-left{
+	float:none !important;
+	width:95% !important;
+	margin:0 auto;
+	margin-top:20px;
+  }
+  
+  #footer{ text-align:center; font-size:12px; margin-top:30px; }
+  
+  #footer .left, .right{
+	float:none !important;
+  }
+  
+   ul.footer-menu{
+		margin-top:10px;
+   }
+  
+  ul.footer-menu > li{
+	float:none !important;
+	margin-left:0px !important;
+  }
+  
+  .page{
+	width:95%;
+	padding-left:2.5%;
+	padding-right:2.5%;
+  }
+  
+}

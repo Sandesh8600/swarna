@@ -1,0 +1,15 @@
+<?php
+
+define('DB_DEBUG', TRUE);
+
+define('DB_HOST_NAME_WRITE', 'localhost');
+define('DB_USER_NAME_WRITE', 'root');
+define('DB_PASS_NAME_WRITE', 'bro4u');
+define('DB_NAME_WRITE', 'tapnow');
+
+define('DB_HOST_NAME_READ', 'localhost');
+define('DB_USER_NAME_READ', 'root');
+define('DB_PASS_NAME_READ', 'bro4u');
+define('DB_NAME_READ',	'tapnow');
+
+?>

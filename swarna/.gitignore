@@ -1,0 +1,41 @@
+*/config/development
+*/logs/log-*.php
+!*/logs/index.html
+*/cache/*
+!*/cache/index.html
+!*/cache/.htaccess
+
+application/tests/build/*
+
+*.lock
+
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
+
+#codeigniter 3
+application/logs/*
+!application/logs/index.html
+!application/logs/.htaccess
+/vendor/
+
+# ci-phpunit-test files
+# install: https://github.com/kenjis/ci-phpunit-test
+application/tests/_ci_phpunit_test/*
+.editorconfig
+application/.htaccess
+.idea
+
+.htaccess
+
+# Ignore other bro4u-creds from codebase
+*-creds.*.php
+!*-creds.development.php.sample
+
+/images/
+/files/
+
+images
+
+_*
